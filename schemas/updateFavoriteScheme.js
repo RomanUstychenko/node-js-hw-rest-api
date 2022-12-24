@@ -1,7 +1,7 @@
-const Joi = require("joi");
+// const Joi = require("joi");
 
-const updateFavoriteScheme = Joi.object({
-  favorite: Joi.boolean().required(),
-});
+// const updateFavoriteScheme = Joi.object({
+//   favorite: Joi.boolean().required(),
+// });
 
-module.exports = updateFavoriteScheme;
+// module.exports = updateFavoriteScheme;
