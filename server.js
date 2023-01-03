@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+mongoose.set('strictQuery', true);
 
 const app = require("./app");
 
@@ -12,5 +13,3 @@ mongoose.connect(DB_HOST, console.log("Database connection successful"))
   console.log(error.message);
   process.exit(1)
 })
-
-
