@@ -24,7 +24,11 @@ const userShema = new Schema (
         },
         token: {
           type: String,
-        }
+        },
+        avatarURL: {
+          type: String,
+          required: true,
+        },
       },
     { versionKey: false }
 );
