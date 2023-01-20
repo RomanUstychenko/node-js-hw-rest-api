@@ -29,6 +29,13 @@ const userShema = new Schema (
           type: String,
           required: true,
         },
+        verify: {
+          type: Boolean,
+          default: false,
+        },
+        verificationCode: {
+          type: String,
+        }
       },
     { versionKey: false }
 );
