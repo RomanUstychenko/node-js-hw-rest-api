@@ -16,4 +16,6 @@ router.post("/logout", authenticate, ctrlWrapper(ctrl.logout))
 
 router.patch("/avatars", authenticate, upload.single("avatar"), ctrlWrapper(ctrl.updateAvatar))
 
+router.get("/verify/:verificationCode", ctrlWrapper(ctrl.verify))
+
 module.exports = router;
