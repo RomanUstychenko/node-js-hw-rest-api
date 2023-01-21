@@ -1,14 +1,14 @@
 const sgMail = require("@sendgrid/mail");
-require("dotenv").config()
+require("dotenv").config();
 
-const {SENGRID_API_KEY} = process.env;
+const { SENGRID_API_KEY } = process.env;
 
-sgMail.setApiKey(SENGRID_API_KEY)
+sgMail.setApiKey(SENGRID_API_KEY);
 
 const sendEmail = async (data) => {
-    const email = {...data, from: "roman.ustychenko@gmail.com"};
-    await sgMail.send(email);
-    return true;
+  const email = { ...data, from: "roman.ustychenko@gmail.com" };
+  await sgMail.send(email);
+  return true;
 };
 
-module.exports = sendEmail
+module.exports = sendEmail;
