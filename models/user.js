@@ -11,7 +11,7 @@ const userShema = new Schema (
           required: [true, 'Set password for user'],
           minlenght: 6,
         },
-        login: {
+        name: {
           type: String,
           required: [true, 'Login is required'],
           // metch: login,
@@ -50,7 +50,7 @@ const userShema = new Schema (
 userShema.post("save", handleMongooseError);
 
 const registerSchema = Joi.object({
-    login: Joi.string().required(),
+    name: Joi.string().required(),
     email: Joi.string().pattern(emailRegex).required(),
     password: Joi.string().min(6).required(),
 });
