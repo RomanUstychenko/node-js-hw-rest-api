@@ -12,6 +12,7 @@ const register = async (req, res) => {
   if (user) {
     throw HttpError(409, "Email in use");
   }
+ 
   const hashPassword = await bcryptjs.hash(password, 10);
   const avatarURL = gravatar.url(email);
   const verificationToken = nanoid();
@@ -29,6 +30,7 @@ const register = async (req, res) => {
   await sendEmail(verifyEmail);
 
   res.status(201).json({
+    name: newUser.name,
     email: newUser.email,
   });
 };

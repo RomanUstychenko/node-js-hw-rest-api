@@ -6,22 +6,20 @@ const Joi = require("joi");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 const userShema = new Schema (
     {
-        password: {
-          type: String,
-          required: [true, 'Set password for user'],
-          minlenght: 6,
-        },
-        name: {
-          type: String,
-          required: [true, 'Login is required'],
-          // metch: login,
-          unique: true,
-        },
+      name: {
+        type: String,
+        required: [true, 'name is required'],
+      },    
         email: {
           type: String,
           required: [true, 'Email is required'],
           metch: emailRegex,
           unique: true,
+        },
+        password: {
+          type: String,
+          required: [true, 'Set password for user'],
+          minlenght: 6,
         },
         subscription: {
           type: String,
