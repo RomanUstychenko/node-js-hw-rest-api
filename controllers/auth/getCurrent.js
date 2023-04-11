@@ -1,7 +1,8 @@
 const getCurrent = (req, res) => {
-  const { email } = req.user;
+  const { email, name, verify } = req.user;
   res.json({
     email,
+    name, verify,
   });
 };
 
